@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function CalculatorItem() {
-  const [answer, setAnswer] = useState("0");
+  const [answer, setAnswer] = useState("");
 
   const clickButton = (e) => {
     setAnswer(answer.concat(e.target.value));
@@ -21,11 +21,8 @@ function CalculatorItem() {
 
   return (
     <>
-      <form>
-        <input type="text" value={answer} />
-      </form>
-
-      <div className="button">
+     <input type="text" value={answer} />
+       <div className="button">
         <button
           className="change-color"
           id="clear-button"
